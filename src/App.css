@@ -1,38 +1,204 @@
+:root {
+   --limeColor: #d1e8e2;
+   --biegeColor: #ffcb9a;
+   --tanColor: #d9b08c;
+   --forestColor: #116466;
+   --darkColor: #2c3531;
+}
+* {
+   z-index: 1;
+   margin: 0;
+   padding: 0;
+   letter-spacing: 0.02em;
+   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {
+   height: 100%;
+}
+body {
+   height: 100%;
+   background-image: linear-gradient(#1e4c59, var(--darkColor));
+}
+#root {
+   height: 100%;
+}
 .App {
-  text-align: center;
+   width: 100%;
+   height: 100%;
+}
+h1 {
+   font-size: 80px;
+   margin-bottom: 15px;
+   color: var(--tanColor);
+}
+h3 {
+   font-size: 40px;
+   margin-bottom: 30px;
+   color: var(--limeColor);
+}
+.smallBtn {
+   width: 2em;
+   height: 2em;
+   margin: 0.2em;
+   fill: var(--limeColor);
+}
+.homePageContainer {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.splashContainer {
+   margin: auto;
+}
+.centerText {
+   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.largeBtn {
+   text-decoration: none;
+   font-size: 30px;
+   padding: 10px 30px;
+   margin: 10px 30px;
+   border: 1px var(--limeColor) solid;
+   color: var(--tanColor);
+   border-radius: 0.3em;
+   background-color: rgba(17, 100, 102, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navButtons {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+.canvas {
+   z-index: 0;
+   position: absolute;
+}
+.row {
+   display: flex;
+   flex-direction: row;
+}
+.col {
+   display: flex;
+   flex-direction: column;
+}
+h5 {
+   padding-bottom: 8px;
+   font-size: 20px;
+   color: var(--tanColor);
+}
+.header {
+   position: absolute;
+   width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.center {
+   padding-top: 20px;
+   width: 80%;
+   margin: auto;
+}
+.contactCard {
+   padding: 20px;
+}
+.arrowRight {
+   width: 0;
+   height: 0;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent;
+
+   border-left: 10px solid var(--tanColor);
 }
 
-.App-link {
-  color: #61dafb;
-}
+.arrowLeft {
+   width: 0;
+   height: 0;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+   border-right: 10px solid var(--tanColor);
+}
+.line {
+   margin: auto;
+   height: 1px;
+   width: 40%;
+   background-color: var(--tanColor);
+}
+.stylisticSeperator {
+   padding-top: 15px;
+   width: 100%;
+   margin: auto;
+}
+.chevronTop {
+   justify-content: flex-start;
+   margin-top: 10px;
+   transform: rotate(270deg);
+}
+.chevronBottom {
+   justify-content: flex-end;
+   margin-bottom: 10px;
+   transform: rotate(90deg);
+}
+.mainCardContainer {
+   width: 100%;
+   padding-top: 150px;
+   position: absolute;
+   justify-content: space-between;
+}
+.chevronContainer {
+   height: 2.1em;
+   margin: 0px auto;
+}
+.projectsContainer {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 20px auto;
+   justify-content: center;
+}
+.projectCard {
+   display: flex;
+   justify-content: space-between;
+   border: 1px solid var(--limeColor);
+   width: 40%;
+   margin: 10px;
+   padding: 20px;
+   border-radius: 10px;
+   background-color: rgba(44, 53, 49, 0.9);
+}
+.projectBtn {
+   text-decoration: none;
+   font-size: 14px;
+   padding: 5px 15px;
+   margin: 5px;
+   border: 1px var(--limeColor) solid;
+   color: var(--tanColor);
+   border-radius: 0.3em;
+   background-color: rgba(17, 100, 102, 0.5);
+}
+h6 {
+   font-size: 16px;
+   font-weight: 500;
+   color: var(--biegeColor);
+}
+.projectLi {
+   font-size: 14px;
+   font-weight: 500;
+   color: var(--tanColor);
+}
+.projectCardCol {
+   display: flex;
+   justify-content: space-between;
+}
+.projectImg {
+   width: 83%;
+}
+ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+li {
+   list-style-type: none;
 }
