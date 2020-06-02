@@ -16,7 +16,7 @@ function App() {
          <Header />
          <Switch>
             <Route exact path="/" render={() => <Home />} />
-            <Route path="/projects/:pageNumber" component={Projects} />
+            <Route path="/projects" component={Projects} />
             <Route path="/resume" component={Resume} />
             <Route path="/contact" component={Contact} />
             <Route render={() => <h1>404</h1>} />

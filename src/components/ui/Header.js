@@ -13,7 +13,6 @@ import { Tab } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import { Tooltip } from "@material-ui/core";
 import { Drawer } from "@material-ui/core/";
-import { Divider } from "@material-ui/core/";
 import { IconButton } from "@material-ui/core/";
 import { List } from "@material-ui/core/";
 import { ListItem } from "@material-ui/core/";
@@ -40,7 +39,8 @@ function ElevationScroll(props) {
 
    return React.cloneElement(children, {
       // trigger ? shadow during scroll : resting shadow
-      elevation: trigger ? 0 : 0,
+      elevation: trigger ? 10 : 0,
+      color: trigger ? "background" : "transparent",
    });
 }
 
@@ -52,20 +52,17 @@ const useStyles = makeStyles((theme) => ({
    tab: {
       ...theme.typography.tab,
    },
-   headerName: {
-      marginTop: "10px",
-   },
    bigIndicator: {
       height: 8,
    },
    menuButtonContainer: {
-      margin: [[20, 20, 0, "auto"]],
+      margin: [["auto", "5px", "auto", "auto"]],
    },
    largeIcon: {
+      marginLeft: "1rem",
       width: 40,
       height: 40,
    },
-
    //all classes down here control the menu button and drawer
    root: {
       display: "flex",
@@ -145,87 +142,100 @@ function Header() {
 
    return (
       <ElevationScroll>
-         <AppBar position="fixed" color="transparent">
-            <Toolbar>
-               <Box display={{ xs: "none", md: "block", lg: "block" }}>
-                  <Typography
-                     variant="h5"
-                     color="primary"
-                     className={classes.headerName}
-                  >
-                     <Box fontWeight="fontWeightRegular">
-                        Patrick Marschlowitz
+         <AppBar position="fixed">
+            <Box>
+               <Toolbar>
+                  <Box display={{ xs: "none", md: "block", lg: "block" }}>
+                     <Typography
+                        variant="h5"
+                        color="primary"
+                        className={classes.headerName}
+                     >
+                        <Box fontWeight="fontWeightRegular" mt=".5rem">
+                           Patrick Marschlowitz
+                        </Box>
+                     </Typography>
+                     <Box display="flex" justifyContent="center" mb=".5rem">
+                        <Tooltip id="github" title="View my Github">
+                           <Button href="https://github.com/Drasek-25">
+                              <GitHubIcon />
+                           </Button>
+                        </Tooltip>
+                        <Tooltip id="Email" title="Contact Me">
+                           <Button href="mailto:p.marschlowitz@gmail.com">
+                              <EmailIcon />
+                           </Button>
+                        </Tooltip>
+                        <Tooltip id="LinkedIn" title="View my LinkedIn">
+                           <Button href="https://www.linkedin.com/in/patrick-marschlowitz-77ba5b7b/">
+                              <LinkedInIcon />
+                           </Button>
+                        </Tooltip>
                      </Box>
-                  </Typography>
-                  <Box display="flex" justifyContent="center">
-                     <Tooltip id="github" title="View my Github">
-                        <Button href="https://github.com/Drasek-25">
-                           <GitHubIcon />
-                        </Button>
-                     </Tooltip>
-                     <Tooltip id="Email" title="Contact Me">
-                        <Button href="mailto:p.marschlowitz@gmail.com">
-                           <EmailIcon />
-                        </Button>
-                     </Tooltip>
-                     <Tooltip id="LinkedIn" title="View my LinkedIn">
-                        <Button href="https://www.linkedin.com/in/patrick-marschlowitz-77ba5b7b/">
-                           <LinkedInIcon />
-                        </Button>
-                     </Tooltip>
                   </Box>
-               </Box>
-               <Box
-                  display={{ xs: "none", md: "block", lg: "block" }}
-                  className={classes.tabContainer}
-               >
-                  <Tabs
-                     value={pageSelection}
-                     onChange={handleTabChange}
-                     classes={{ indicator: classes.bigIndicator }}
+                  <Box
+                     display={{ xs: "none", md: "block", lg: "block" }}
+                     className={classes.tabContainer}
                   >
-                     <Tab
-                        label="Home"
-                        className={classes.tab}
-                        component={Link}
-                        to="/"
-                     />
-                     <Tab
-                        label="Projects"
-                        className={classes.tab}
-                        component={Link}
-                        to="/projects"
-                     />
-                     <Tab
-                        label="Resume"
-                        className={classes.tab}
-                        component={Link}
-                        to="/resume"
-                     />
-                     <Tab
-                        label="Contact"
-                        className={classes.tab}
-                        component={Link}
-                        to="/contact"
-                     />
-                  </Tabs>
-               </Box>
-               <Box
-                  display={{ xs: "block", md: "none", lg: "none" }}
-                  className={classes.menuButtonContainer}
-               >
-                  <IconButton
-                     color="inherit"
-                     aria-label="open drawer"
-                     edge="end"
-                     onClick={handleDrawerOpen}
-                     className={clsx(open && classes.hide)}
-                     size="small"
+                     <Tabs
+                        value={pageSelection}
+                        onChange={handleTabChange}
+                        classes={{ indicator: classes.bigIndicator }}
+                     >
+                        <Tab
+                           label="Home"
+                           className={classes.tab}
+                           component={Link}
+                           to="/"
+                        />
+                        <Tab
+                           label="Projects"
+                           className={classes.tab}
+                           component={Link}
+                           to="/projects"
+                        />
+                        <Tab
+                           label="Resume"
+                           className={classes.tab}
+                           component={Link}
+                           to="/resume"
+                        />
+                        <Tab
+                           label="Contact"
+                           className={classes.tab}
+                           component={Link}
+                           to="/contact"
+                        />
+                     </Tabs>
+                  </Box>
+
+                  <Box display={{ xs: "block", md: "none", lg: "none" }}>
+                     <Typography variant="h5" color="primary">
+                        <Box fontWeight="fontWeightRegular">
+                           Patrick Marschlowitz
+                        </Box>
+                     </Typography>
+                  </Box>
+                  <Box
+                     display={{ xs: "block", md: "none", lg: "none" }}
+                     className={classes.menuButtonContainer}
                   >
-                     <MenuIcon color="primary" className={classes.largeIcon} />
-                  </IconButton>
-               </Box>
-            </Toolbar>
+                     <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        edge="end"
+                        onClick={handleDrawerOpen}
+                        className={clsx(open && classes.hide)}
+                        size="small"
+                     >
+                        <MenuIcon
+                           color="primary"
+                           className={classes.largeIcon}
+                        />
+                     </IconButton>
+                  </Box>
+               </Toolbar>
+            </Box>
             <Drawer
                className={classes.drawer}
                variant="persistent"
@@ -250,19 +260,29 @@ function Header() {
                      </ListItemIcon>
                      <ListItemText primary="Home" />
                   </ListItem>
-                  <ListItem button key={"Projects"} component={Link} to="/">
+                  <ListItem
+                     button
+                     key={"Projects"}
+                     component={Link}
+                     to="/projects"
+                  >
                      <ListItemIcon>
                         <FolderIcon color="primary" />
                      </ListItemIcon>
                      <ListItemText primary="Projects" />
                   </ListItem>
-                  <ListItem button key={"Resume"} component={Link} to="/">
+                  <ListItem button key={"Resume"} component={Link} to="/resume">
                      <ListItemIcon>
                         <DescriptionIcon color="primary" />
                      </ListItemIcon>
                      <ListItemText primary="Resume" />
                   </ListItem>
-                  <ListItem button key={"Contacts"} component={Link} to="/">
+                  <ListItem
+                     button
+                     key={"Contacts"}
+                     component={Link}
+                     to="/contacts"
+                  >
                      <ListItemIcon>
                         <ContactMailIcon color="primary" />
                      </ListItemIcon>
