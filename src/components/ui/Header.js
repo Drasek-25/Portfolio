@@ -2,32 +2,35 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core";
-import { AppBar } from "@material-ui/core";
-import { Toolbar } from "@material-ui/core";
-import { Typography } from "@material-ui/core";
-import { useScrollTrigger } from "@material-ui/core";
-import { Box } from "@material-ui/core";
-import { Tabs } from "@material-ui/core";
-import { Tab } from "@material-ui/core";
-import { Button } from "@material-ui/core";
-import { Tooltip } from "@material-ui/core";
-import { Drawer } from "@material-ui/core/";
-import { IconButton } from "@material-ui/core/";
-import { List } from "@material-ui/core/";
-import { ListItem } from "@material-ui/core/";
-import { ListItemIcon } from "@material-ui/core/";
-import { ListItemText } from "@material-ui/core/";
-
-import HomeIcon from "@material-ui/icons/Home";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import EmailIcon from "@material-ui/icons/Email";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import MenuIcon from "@material-ui/icons/Menu";
-import LastPageIcon from "@material-ui/icons/LastPage";
-import FolderIcon from "@material-ui/icons/Folder";
-import DescriptionIcon from "@material-ui/icons/Description";
-import ContactMailIcon from "@material-ui/icons/ContactMail";
+import { makeStyles } from "@material-ui/core";
+import {
+   AppBar,
+   Toolbar,
+   Typography,
+   useScrollTrigger,
+   Box,
+   Tabs,
+   Tab,
+   Button,
+   Tooltip,
+   Drawer,
+   IconButton,
+   List,
+   ListItem,
+   ListItemIcon,
+   ListItemText,
+} from "@material-ui/core";
+import {
+   Home,
+   GitHub,
+   Email,
+   LinkedIn,
+   Menu,
+   LastPage,
+   Folder,
+   Description,
+   ContactMail,
+} from "@material-ui/icons";
 
 function ElevationScroll(props) {
    const { children } = props;
@@ -40,7 +43,7 @@ function ElevationScroll(props) {
    return React.cloneElement(children, {
       // trigger ? shadow during scroll : resting shadow
       elevation: trigger ? 10 : 0,
-      color: trigger ? "background" : "transparent",
+      color: trigger ? "#47504F" : "transparent",
    });
 }
 
@@ -124,7 +127,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Header() {
    const classes = useStyles();
-   const theme = useTheme();
    const [pageSelection, setPageSelection] = useState(0);
    const [open, setOpen] = React.useState(false);
 
@@ -158,17 +160,17 @@ function Header() {
                      <Box display="flex" justifyContent="center" mb=".5rem">
                         <Tooltip id="github" title="View my Github">
                            <Button href="https://github.com/Drasek-25">
-                              <GitHubIcon />
+                              <GitHub />
                            </Button>
                         </Tooltip>
                         <Tooltip id="Email" title="Contact Me">
                            <Button href="mailto:p.marschlowitz@gmail.com">
-                              <EmailIcon />
+                              <Email />
                            </Button>
                         </Tooltip>
                         <Tooltip id="LinkedIn" title="View my LinkedIn">
                            <Button href="https://www.linkedin.com/in/patrick-marschlowitz-77ba5b7b/">
-                              <LinkedInIcon />
+                              <LinkedIn />
                            </Button>
                         </Tooltip>
                      </Box>
@@ -228,10 +230,7 @@ function Header() {
                         className={clsx(open && classes.hide)}
                         size="small"
                      >
-                        <MenuIcon
-                           color="primary"
-                           className={classes.largeIcon}
-                        />
+                        <Menu color="primary" className={classes.largeIcon} />
                      </IconButton>
                   </Box>
                </Toolbar>
@@ -247,16 +246,13 @@ function Header() {
             >
                <div className={classes.drawerHeader}>
                   <IconButton onClick={handleDrawerClose}>
-                     <LastPageIcon
-                        className={classes.largeIcon}
-                        color="primary"
-                     />
+                     <LastPage className={classes.largeIcon} color="primary" />
                   </IconButton>
                </div>
                <List>
                   <ListItem button key={"Home"} component={Link} to="/">
                      <ListItemIcon>
-                        <HomeIcon color="primary" />
+                        <Home color="primary" />
                      </ListItemIcon>
                      <ListItemText primary="Home" />
                   </ListItem>
@@ -267,13 +263,13 @@ function Header() {
                      to="/projects"
                   >
                      <ListItemIcon>
-                        <FolderIcon color="primary" />
+                        <Folder color="primary" />
                      </ListItemIcon>
                      <ListItemText primary="Projects" />
                   </ListItem>
                   <ListItem button key={"Resume"} component={Link} to="/resume">
                      <ListItemIcon>
-                        <DescriptionIcon color="primary" />
+                        <Description color="primary" />
                      </ListItemIcon>
                      <ListItemText primary="Resume" />
                   </ListItem>
@@ -281,28 +277,30 @@ function Header() {
                      button
                      key={"Contacts"}
                      component={Link}
-                     to="/contacts"
+                     to="/contact"
                   >
                      <ListItemIcon>
-                        <ContactMailIcon color="primary" />
+                        <ContactMail color="primary" />
                      </ListItemIcon>
                      <ListItemText primary="Contacts" />
                   </ListItem>
-                  <ListItem>
-                     <Button href="https://github.com/Drasek-25">
-                        <ListItemIcon>
-                           <GitHubIcon color="primary" />
-                        </ListItemIcon>
-                        <ListItemText primary="Github" />
-                     </Button>
+                  <ListItem
+                     component={Button}
+                     href='href="https://github.com/Drasek-25"'
+                  >
+                     <ListItemIcon>
+                        <GitHub color="primary" />
+                     </ListItemIcon>
+                     <ListItemText primary="Github" />
                   </ListItem>
-                  <ListItem>
-                     <Button href="https://www.linkedin.com/in/patrick-marschlowitz-77ba5b7b/">
-                        <ListItemIcon>
-                           <LinkedInIcon color="primary" />
-                        </ListItemIcon>
-                        <ListItemText primary="LinkedIn" />
-                     </Button>
+                  <ListItem
+                     component={Button}
+                     href='href="https://github.com/Drasek-25"'
+                  >
+                     <ListItemIcon>
+                        <LinkedIn color="primary" />
+                     </ListItemIcon>
+                     <ListItemText primary="LinkedIn" />
                   </ListItem>
                </List>
             </Drawer>

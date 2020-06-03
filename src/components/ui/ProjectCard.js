@@ -1,18 +1,23 @@
 import React from "react";
-import { Card } from "@material-ui/core";
-import { CardActions } from "@material-ui/core";
-import { CardContent } from "@material-ui/core";
-import { Button } from "@material-ui/core";
-import { Typography } from "@material-ui/core";
-import { Box } from "@material-ui/core";
-import { CardMedia } from "@material-ui/core";
+
+import {
+   Card,
+   CardActions,
+   CardContent,
+   Button,
+   Typography,
+   Box,
+   CardMedia,
+   Grid,
+} from "@material-ui/core";
+
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
    card: {
-      backgroundColor: "rgba(71, 80, 79, 1)",
-      width: "20rem",
+      backgroundColor: "#47504F",
+      //this variable will require media queries to scale to a proper width based on device
+
       marginLeft: "auto",
       marginRight: "auto",
    },
@@ -25,7 +30,7 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
    const classes = useStyles();
 
    return (
-      <Grid item xs>
+      <Grid item xs={12} sm={6} md={3}>
          <Card className={classes.card} elevation={10}>
             <Typography variant="h6" color="primary" component="div" noWrap>
                <Box m=".5rem"> {title}</Box>
@@ -37,7 +42,7 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
                   <br />
                   {techUsed.map((tech, i) => {
                      return (
-                        <span key={tech}>
+                        <span key={tech + i}>
                            {i < techUsed.length - 1 ? tech + ", " : tech}
                         </span>
                      );
