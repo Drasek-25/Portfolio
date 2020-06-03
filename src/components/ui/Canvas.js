@@ -88,20 +88,6 @@ function DarkConstellation() {
          ctx.canvas.width = window.innerWidth;
          ctx.canvas.height = window.innerHeight;
          maxBallCount = (ctx.canvas.width + ctx.canvas.height) / 20;
-         if (currentBallCount < maxBallCount) {
-            if (firstDraw === false) {
-               let circle = new circleInfo();
-               savedCircles.push(circle);
-               currentBallCount++;
-            } else {
-               let circle = new originalCircleGen();
-               savedCircles.push(circle);
-               currentBallCount++;
-               if (currentBallCount > maxBallCount - 20) {
-                  firstDraw = false;
-               }
-            }
-         }
          for (let i = 0; i < savedCircles.length - 1; i++) {
             for (let j = i + 1; j < savedCircles.length - 1; j++) {
                let hypot = Math.hypot(
@@ -126,6 +112,21 @@ function DarkConstellation() {
             ) {
                savedCircles.splice(i, 1);
                currentBallCount--;
+            }
+         }
+
+         if (currentBallCount < maxBallCount) {
+            if (firstDraw === false) {
+               let circle = new circleInfo();
+               savedCircles.push(circle);
+               currentBallCount++;
+            } else {
+               let circle = new originalCircleGen();
+               savedCircles.push(circle);
+               currentBallCount++;
+               if (currentBallCount > maxBallCount - 20) {
+                  firstDraw = false;
+               }
             }
          }
       }

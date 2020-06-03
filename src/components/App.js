@@ -15,6 +15,7 @@ function App() {
    return (
       <ThemeProvider theme={theme}>
          <Header />
+
          <Switch>
             <Route exact path="/" render={() => <Home />} />
             <Route path="/projects" component={Projects} />
