@@ -16,7 +16,7 @@ function DarkConstellation() {
    const frameRate = 10;
    const exitRange = 100;
    let currentBallCount = 0;
-   let maxBallCount = 0;
+
    let lineLength = 120;
    let firstDraw = true;
 
@@ -45,6 +45,9 @@ function DarkConstellation() {
 
    useEffect(() => {
       const ctx = canvasRef.current.getContext("2d");
+
+      let maxBallCount = 0;
+
       const originalCircleGen = function () {
          this.velX = randomNum(-2, 2);
          this.velY = randomNum(-1, -3);
@@ -80,11 +83,25 @@ function DarkConstellation() {
          ctx.strokeStyle = "#ffcb9a";
          ctx.stroke();
       }
-
+      let firstDraw = true;
       function draw() {
          ctx.canvas.width = window.innerWidth;
          ctx.canvas.height = window.innerHeight;
          maxBallCount = (ctx.canvas.width + ctx.canvas.height) / 20;
+         if (currentBallCount < maxBallCount) {
+            if (firstDraw === false) {
+               let circle = new circleInfo();
+               savedCircles.push(circle);
+               currentBallCount++;
+            } else {
+               let circle = new originalCircleGen();
+               savedCircles.push(circle);
+               currentBallCount++;
+               if (currentBallCount > maxBallCount - 20) {
+                  firstDraw = false;
+               }
+            }
+         }
          for (let i = 0; i < savedCircles.length - 1; i++) {
             for (let j = i + 1; j < savedCircles.length - 1; j++) {
                let hypot = Math.hypot(
@@ -111,24 +128,9 @@ function DarkConstellation() {
                currentBallCount--;
             }
          }
-
-         if (currentBallCount < maxBallCount) {
-            if (firstDraw === false) {
-               let circle = new circleInfo();
-               savedCircles.push(circle);
-               currentBallCount++;
-            } else {
-               let circle = new originalCircleGen();
-               savedCircles.push(circle);
-               currentBallCount++;
-               if (currentBallCount > maxBallCount - 20) {
-                  firstDraw = false;
-               }
-            }
-         }
       }
       setInterval(draw, frameRate);
-   }, [canvasRef]);
+   });
 
    return (
       <canvas className="canvas" ref={canvasRef} onClick={handleCanvasClick} />

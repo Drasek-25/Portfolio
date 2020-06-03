@@ -1,14 +1,13 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-
 import Home from "./views/Home";
 import Header from "./ui/Header";
 import DarkConstellation from "./ui/Canvas";
 import Contact from "./views/Contact";
 import Resume from "./views/Resume";
 import Projects from "./views/Projects";
-import theme from "./ui/Theme";
+import theme from "./ui/theme";
 
 import { ThemeProvider } from "@material-ui/core/styles";
 
