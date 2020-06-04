@@ -6,7 +6,7 @@ import { Grid, Box } from "@material-ui/core";
 
 const Projects = () => {
    return (
-      <Box mt="6rem" mx="auto" maxWidth="1280px" width="90%">
+      <Box mt="7rem" mx="auto" maxWidth="1280px" width="90%">
          <Grid container spacing={4} justify="center" alignItems="center">
             {data.map((project, i) => {
                return (
