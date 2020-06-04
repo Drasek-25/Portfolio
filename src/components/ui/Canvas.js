@@ -16,7 +16,7 @@ function DarkConstellation() {
    const frameRate = 10;
    const exitRange = 100;
    let currentBallCount = 0;
-   let maxBallCount = 0;
+
    let lineLength = 120;
    let firstDraw = true;
 
@@ -45,6 +45,9 @@ function DarkConstellation() {
 
    useEffect(() => {
       const ctx = canvasRef.current.getContext("2d");
+
+      let maxBallCount = 0;
+
       const originalCircleGen = function () {
          this.velX = randomNum(-2, 2);
          this.velY = randomNum(-1, -3);
@@ -80,7 +83,7 @@ function DarkConstellation() {
          ctx.strokeStyle = "#ffcb9a";
          ctx.stroke();
       }
-
+      let firstDraw = true;
       function draw() {
          ctx.canvas.width = window.innerWidth;
          ctx.canvas.height = window.innerHeight;
@@ -128,7 +131,7 @@ function DarkConstellation() {
          }
       }
       setInterval(draw, frameRate);
-   }, [canvasRef]);
+   });
 
    return (
       <canvas className="canvas" ref={canvasRef} onClick={handleCanvasClick} />
