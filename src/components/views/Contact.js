@@ -81,13 +81,11 @@ const Contact = () => {
             setError(false);
             setSuccess(true);
             setForm(initialState);
-            console.log({ loading: loading, error: error, success: success });
          })
          .catch(() => {
             setLoading(false);
             setError(true);
             setSuccess(false);
-            console.log({ loading: loading, error: error, success: success });
          });
    };
 
