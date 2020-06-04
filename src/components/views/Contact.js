@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { Box, TextField, Card } from "@material-ui/core";
+import { Box, TextField, Card, Button, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-//MuiFormLabel-root
+import SendIcon from "@material-ui/icons/Send";
+
 const useStyles = makeStyles((theme) => ({
    card: {
       backgroundColor: "rgba(71, 80, 79, 1)",
       padding: "1rem",
       marginLeft: "auto",
       marginRight: "auto",
+      width: "90%",
+      maxWidth: "800px",
    },
    root: {
       "& .MuiTextField-root": {
@@ -52,37 +55,37 @@ const Contact = () => {
          <Card className={classes.card} elevation={10}>
             <form noValidate className={classes.root}>
                <Box display="flex" flexDirection="column">
-                  <Box>
-                     <TextField
-                        required
-                        id="email"
-                        variant="outlined"
-                        label="Email Address"
-                        value={form.email}
-                        onChange={handleInput}
-                        InputProps={classes.input}
-                     />
-                     <TextField
-                        required
-                        id="subject"
-                        variant="outlined"
-                        label="Subject"
-                        value={form.subject}
-                        onChange={handleInput}
-                        InputProps={classes.input}
-                     />
-                  </Box>
+                  <TextField
+                     required
+                     id="email"
+                     variant="outlined"
+                     label="Email Address"
+                     value={form.email}
+                     onChange={handleInput}
+                     InputProps={classes.input}
+                  />
                   <TextField
                      required
                      multiline
                      id="message"
                      variant="outlined"
                      label="Your Message"
-                     rows={8}
+                     rows={16}
                      value={form.message}
                      onChange={handleInput}
                      InputProps={classes.input}
                   />
+                  <Box display="flex" justifyContent="flex-end" m=".6rem">
+                     <Button variant="contained" color="secondary">
+                        <SendIcon
+                           color="primary"
+                           className={classes.largeIcon}
+                           mr="5px"
+                        />
+
+                        <Typography color="primary">Send</Typography>
+                     </Button>
+                  </Box>
                </Box>
             </form>
          </Card>

@@ -1,4 +1,4 @@
-const placeHolderImgUrl = "https://picsum.photos/200/300";
+const placeHolderImgUrl = "https://picsum.photos/288/162";
 
 const projectData = [
    {
