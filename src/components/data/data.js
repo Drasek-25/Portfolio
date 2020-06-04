@@ -1,9 +1,18 @@
-const placeHolderImgUrl = "https://picsum.photos/288/162";
+import breakout from "./images/breakout.PNG";
+import canvasani from "./images/canvasani.PNG";
+import github from "./images/github.PNG";
+import hackernews from "./images/hackerNews.PNG";
+import plaid from "./images/plaid.PNG";
+import portfolio from "./images/portfolio.PNG";
+import timetracker from "./images/timetracker.PNG";
+import weather from "./images/weather.PNG";
+
+// const placeHolderImgUrl = "https://picsum.photos/288/162";
 
 const projectData = [
    {
       title: "Portfolio",
-      image: placeHolderImgUrl,
+      image: portfolio,
       liveLink: "placeholder.com",
       repoLink: "https://github.com/Drasek-25/Portfolio",
       techUsed: ["React", "Material UI", "Canvas"],
@@ -15,7 +24,7 @@ const projectData = [
    },
    {
       title: "Hacker News App",
-      image: placeHolderImgUrl,
+      image: hackernews,
       liveLink: "placeholder.com",
       repoLink: "https://github.com/Drasek-25/REACT-ROUTER-Hacker-News",
       techUsed: ["React", "Axios"],
@@ -26,7 +35,7 @@ const projectData = [
    },
    {
       title: "Plaid Login Utility",
-      image: placeHolderImgUrl,
+      image: plaid,
       liveLink: "placeholder.com",
       repoLink: "https://github.com/Drasek-25/Plaid-Project",
       techUsed: ["React", "Redux", "Axios"],
@@ -38,7 +47,7 @@ const projectData = [
    },
    {
       title: "Breakout",
-      image: placeHolderImgUrl,
+      image: breakout,
       liveLink: "placeholder.com",
       repoLink: "https://github.com/Drasek-25/CANVAS-Breakout-Game",
       techUsed: ["JS", "Canvas"],
@@ -51,7 +60,7 @@ const projectData = [
    },
    {
       title: "Constellation Animation",
-      image: placeHolderImgUrl,
+      image: canvasani,
       liveLink: "placeholder.com",
       repoLink: "https://github.com/Drasek-25/CANVAS-Constellation",
       techUsed: ["React", "Redux", "Axios"],
@@ -62,7 +71,7 @@ const projectData = [
    },
    {
       title: "Github Social App",
-      image: placeHolderImgUrl,
+      image: github,
       liveLink: "placeholder.com",
       repoLink: "https://github.com/Drasek-25/REACT-Github-API",
       techUsed: ["React", "Redux", "Axios"],
@@ -73,7 +82,7 @@ const projectData = [
    },
    {
       title: "Weather App",
-      image: placeHolderImgUrl,
+      image: weather,
       liveLink: "placeholder.com",
       repoLink: "placeholder.com",
       techUsed: ["React", "Axios"],
@@ -85,7 +94,7 @@ const projectData = [
    },
    {
       title: "Time Tracker",
-      image: placeHolderImgUrl,
+      image: timetracker,
       liveLink: "placeholder.com",
       repoLink: "placeholder.com",
       techUsed: ["JS", "HTML", "CSS"],

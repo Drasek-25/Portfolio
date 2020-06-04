@@ -112,7 +112,7 @@ function NavDrawer({ open, handleDrawerClose }) {
                <ListItemIcon>
                   <ContactMail color="primary" />
                </ListItemIcon>
-               <ListItemText primary="Contacts" />
+               <ListItemText primary="Contact" />
             </ListItem>
             <ListItem
                component={Button}

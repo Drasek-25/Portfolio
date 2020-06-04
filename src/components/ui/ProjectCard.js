@@ -32,8 +32,8 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
    return (
       <Grid item xs={12} sm={6} md={6} lg={4}>
          <Card className={classes.card} elevation={10}>
-            <Typography variant="h6" color="primary" component="div" noWrap>
-               <Box m=".5rem"> {title}</Box>
+            <Typography variant="h5" color="primary" component="div" noWrap>
+               <Box m=".5rem">{title}</Box>
             </Typography>
             <CardMedia className={classes.media} image={image} title={title} />
             <CardContent>
