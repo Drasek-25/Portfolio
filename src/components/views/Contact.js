@@ -38,11 +38,8 @@ const useStyles = makeStyles((theme) => ({
    },
 }));
 
-//https://docs.google.com/forms/d/e/1FAIpQLScBkNkfcMKh2OJKIqGKADbGq-g5iv-0lofOM6U7-D-30qQSuw/viewform
-
 const Contact = () => {
    const classes = useStyles();
-
    const initialState = {
       email: "",
       message: "",

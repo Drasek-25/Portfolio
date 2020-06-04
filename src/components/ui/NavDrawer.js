@@ -66,25 +66,49 @@ function NavDrawer({ open, handleDrawerClose }) {
             </IconButton>
          </div>
          <List>
-            <ListItem button key={"Home"} component={Link} to="/">
+            <ListItem
+               button
+               key={"Home"}
+               component={Link}
+               to="/"
+               onClick={handleDrawerClose}
+            >
                <ListItemIcon>
                   <Home color="primary" />
                </ListItemIcon>
                <ListItemText primary="Home" />
             </ListItem>
-            <ListItem button key={"Projects"} component={Link} to="/projects">
+            <ListItem
+               button
+               key={"Projects"}
+               component={Link}
+               to="/projects"
+               onClick={handleDrawerClose}
+            >
                <ListItemIcon>
                   <Folder color="primary" />
                </ListItemIcon>
                <ListItemText primary="Projects" />
             </ListItem>
-            <ListItem button key={"Resume"} component={Link} to="/resume">
+            <ListItem
+               button
+               key={"Resume"}
+               component={Link}
+               to="/resume"
+               onClick={handleDrawerClose}
+            >
                <ListItemIcon>
                   <Description color="primary" />
                </ListItemIcon>
                <ListItemText primary="Resume" />
             </ListItem>
-            <ListItem button key={"Contacts"} component={Link} to="/contact">
+            <ListItem
+               button
+               key={"Contacts"}
+               component={Link}
+               to="/contact"
+               onClick={handleDrawerClose}
+            >
                <ListItemIcon>
                   <ContactMail color="primary" />
                </ListItemIcon>
@@ -92,7 +116,8 @@ function NavDrawer({ open, handleDrawerClose }) {
             </ListItem>
             <ListItem
                component={Button}
-               href='href="https://github.com/Drasek-25"'
+               href="https://github.com/Drasek-25"
+               onClick={handleDrawerClose}
             >
                <ListItemIcon>
                   <GitHub color="primary" />
@@ -101,7 +126,8 @@ function NavDrawer({ open, handleDrawerClose }) {
             </ListItem>
             <ListItem
                component={Button}
-               href='href="https://github.com/Drasek-25"'
+               href="https://www.linkedin.com/in/patrick-marschlowitz-77ba5b7b/"
+               onClick={handleDrawerClose}
             >
                <ListItemIcon>
                   <LinkedIn color="primary" />
