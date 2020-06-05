@@ -1,51 +1,100 @@
-const placeHolderImgUrl = "https://picsum.photos/288/162";
+import breakout from "./images/breakout.PNG";
+import canvasani from "./images/canvasani.PNG";
+import github from "./images/github.PNG";
+import hackernews from "./images/hackerNews.PNG";
+import plaid from "./images/plaid.PNG";
+import portfolio from "./images/portfolio.PNG";
+import timetracker from "./images/timetracker.PNG";
+import weather from "./images/weather.PNG";
+
+// const placeHolderImgUrl = "https://picsum.photos/288/162";
 
 const projectData = [
    {
       title: "Portfolio",
-      image: placeHolderImgUrl,
+      image: portfolio,
       liveLink: "placeholder.com",
-      repoLink: "placeholder.com",
+      repoLink: "https://github.com/Drasek-25/Portfolio",
       techUsed: ["React", "Material UI", "Canvas"],
-      features: ["Fully Responsive UI", "Canvas integrated into React", "", ""],
-   },
-   {
-      title: "Plaid Login Utility",
-      image: placeHolderImgUrl,
-      liveLink: "placeholder.com",
-      repoLink: "placeholder.com",
-      techUsed: ["React", "Redux", "Axios"],
       features: [
-         "User Registration",
-         "User Login",
-         "Real banking software",
-         "",
+         "Fully Responsive UI",
+         "Canvas integrated into React",
+         "Email service workaround via Google Forms",
       ],
    },
    {
-      title: "Hacker News",
-      image: placeHolderImgUrl,
+      title: "Hacker News App",
+      image: hackernews,
       liveLink: "placeholder.com",
-      repoLink: "placeholder.com",
+      repoLink: "https://github.com/Drasek-25/REACT-ROUTER-Hacker-News",
       techUsed: ["React", "Axios"],
-      features: ["Ability to see posts, users, & comments", "", "", ""],
+      features: [
+         "Frontend for Hacker News API",
+         "Follow links to posts, users, comments all delivering their own data",
+      ],
    },
    {
-      title: "Weather API",
-      image: placeHolderImgUrl,
+      title: "Plaid Login Utility",
+      image: plaid,
+      liveLink: "placeholder.com",
+      repoLink: "https://github.com/Drasek-25/Plaid-Project",
+      techUsed: ["React", "Redux", "Axios"],
+      features: [
+         "Simple single page application to deal with plaid login",
+         "User Registration/Login",
+         "Real banking software",
+      ],
+   },
+   {
+      title: "Breakout",
+      image: breakout,
+      liveLink: "placeholder.com",
+      repoLink: "https://github.com/Drasek-25/CANVAS-Breakout-Game",
+      techUsed: ["JS", "Canvas"],
+      features: [
+         "Fully functioning Breakout Game",
+         "Special Powers",
+         "Multiple Levels",
+         "User Menu",
+      ],
+   },
+   {
+      title: "Constellation Animation",
+      image: canvasani,
+      liveLink: "placeholder.com",
+      repoLink: "https://github.com/Drasek-25/CANVAS-Constellation",
+      techUsed: ["React", "Redux", "Axios"],
+      features: [
+         "Progammatic animation using the HTML5 Canvas element",
+         "Is the featured background of this webpage",
+      ],
+   },
+   {
+      title: "Github Social App",
+      image: github,
+      liveLink: "placeholder.com",
+      repoLink: "https://github.com/Drasek-25/REACT-Github-API",
+      techUsed: ["React", "Redux", "Axios"],
+      features: [
+         "A full functioning for Github API social network",
+         "Follow links to users, friends, and repos, all delivering their own data",
+      ],
+   },
+   {
+      title: "Weather App",
+      image: weather,
       liveLink: "placeholder.com",
       repoLink: "placeholder.com",
       techUsed: ["React", "Axios"],
       features: [
+         "A Fully functioning frontend for the Weather API",
          "Search for your location via zipcode",
          "Todays weather and 5 day forcast",
-         "",
-         "",
       ],
    },
    {
       title: "Time Tracker",
-      image: placeHolderImgUrl,
+      image: timetracker,
       liveLink: "placeholder.com",
       repoLink: "placeholder.com",
       techUsed: ["JS", "HTML", "CSS"],
@@ -55,30 +104,6 @@ const projectData = [
          "Checkbox for tracking timesheet workflow",
          "Export as .xml file",
       ],
-   },
-   {
-      title: "Project 6",
-      image: placeHolderImgUrl,
-      liveLink: "placeholder.com",
-      repoLink: "placeholder.com",
-      techUsed: ["bullet 1", "bullet 2", "bullet 3"],
-      features: ["bullet 1", "bullet 2", "bullet 3", "bullet 4"],
-   },
-   {
-      title: "Project 7",
-      image: placeHolderImgUrl,
-      liveLink: "placeholder.com",
-      repoLink: "placeholder.com",
-      techUsed: ["bullet 1", "bullet 2", "bullet 3"],
-      features: ["bullet 1", "bullet 2", "bullet 3", "bullet 4"],
-   },
-   {
-      title: "Project 8",
-      image: placeHolderImgUrl,
-      liveLink: "placeholder.com",
-      repoLink: "placeholder.com",
-      techUsed: ["bullet 1", "bullet 2", "bullet 3"],
-      features: ["bullet 1", "bullet 2", "bullet 3", "bullet 4"],
    },
 ];
 export default projectData;

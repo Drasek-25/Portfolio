@@ -30,36 +30,36 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
    const classes = useStyles();
 
    return (
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid item xs={12} sm={6} md={6} lg={4}>
          <Card className={classes.card} elevation={10}>
-            <Typography variant="h6" color="primary" component="div" noWrap>
-               <Box m=".5rem"> {title}</Box>
+            <Typography variant="h5" color="primary" component="div" noWrap>
+               <Box m=".5rem">{title}</Box>
             </Typography>
             <CardMedia className={classes.media} image={image} title={title} />
             <CardContent>
                <Typography>
                   <b>Tech Used:</b>
                   <br />
-                  {techUsed.map((tech, i) => {
-                     return (
-                        <span key={tech + i}>
-                           {i < techUsed.length - 1 ? tech + ", " : tech}
-                        </span>
-                     );
-                  })}
-               </Typography>
-               <Typography noWrap>
-                  <b>Features:</b>
+                  {techUsed.map((tech, i) =>
+                     i < techUsed.length - 1 ? tech + " , " : " " + tech
+                  )}
                   <br />
-                  {features.map((feature, i) => {
-                     return (
-                        <span key={feature}>
-                           <span>{feature} </span>
-                           <br />
-                        </span>
-                     );
-                  })}
+                  <br />
                </Typography>
+               <Box height="7rem">
+                  <Typography noWrap={false}>
+                     <b>Features:</b>
+                     <br />
+                     {features.map((feature, i) => {
+                        return (
+                           <span key={feature}>
+                              <>{"• " + feature}</>
+                              <br />
+                           </span>
+                        );
+                     })}
+                  </Typography>
+               </Box>
             </CardContent>
             <CardActions>
                <Button href={liveLink} variant="contained" color="secondary">
