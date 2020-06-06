@@ -7,7 +7,7 @@ import DarkConstellation from "./ui/Canvas";
 import Contact from "./views/Contact";
 import Resume from "./views/Resume";
 import Projects from "./views/Projects";
-import theme from "./ui/theme";
+import theme from "./ui/Theme";
 
 import { ThemeProvider } from "@material-ui/core/styles";
 
