@@ -43,6 +43,7 @@ const Contact = () => {
    const initialState = {
       email: "",
       message: "",
+      name: "",
    };
    const [form, setForm] = useState(initialState);
    const [loading, setLoading] = useState(false);
@@ -66,9 +67,11 @@ const Contact = () => {
          "https://docs.google.com/forms/u/0/d/e/1FAIpQLScBkNkfcMKh2OJKIqGKADbGq-g5iv-0lofOM6U7-D-30qQSuw/formResponse";
       const MESSAGE_ID = "entry.248060108";
       const EMAIL_ID = "entry.660275134";
+      const NAME_ID = "entry.572381739";
       const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
       const formData = new FormData();
       formData.append(MESSAGE_ID, form.message);
+      formData.append(NAME_ID, form.name);
       formData.append(EMAIL_ID, form.email);
 
       axios
@@ -97,6 +100,15 @@ const Contact = () => {
                      variant="outlined"
                      label="Email Address"
                      value={form.email}
+                     onChange={handleInput}
+                     InputProps={classes.input}
+                  />
+                  <TextField
+                     required
+                     id="name"
+                     variant="outlined"
+                     label="Name"
+                     value={form.name}
                      onChange={handleInput}
                      InputProps={classes.input}
                   />

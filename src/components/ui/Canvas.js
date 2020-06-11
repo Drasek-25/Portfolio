@@ -18,7 +18,6 @@ function DarkConstellation() {
    let currentBallCount = 0;
 
    let lineLength = 120;
-   let firstDraw = true;
 
    const randomNum = (low, high) => {
       return Math.floor(Math.random() * (high - low) + low);

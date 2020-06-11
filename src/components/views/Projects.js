@@ -11,7 +11,7 @@ const Projects = () => {
             {data.map((project, i) => {
                return (
                   <ProjectCard
-                     key={project.title + i}
+                     key={project.title}
                      title={project.title}
                      image={project.image}
                      liveLink={project.liveLink}
