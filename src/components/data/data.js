@@ -68,6 +68,7 @@ const projectData = [
       features: [
          "Progammatic animation using the HTML5 Canvas element",
          "Is the featured background of this webpage",
+         "Animation is interactable with mouse click",
       ],
    },
    {

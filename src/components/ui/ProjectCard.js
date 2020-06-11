@@ -45,7 +45,16 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
             <Typography variant="h5" color="primary" component="div" noWrap>
                <Box m=".5rem">{title}</Box>
             </Typography>
-            <CardMedia className={classes.media} image={image} title={title} />
+            {cardClass !== classes.card ? (
+               <Box mt="200px" />
+            ) : (
+               <CardMedia
+                  className={classes.media}
+                  image={image}
+                  title={title}
+               />
+            )}
+
             <CardContent>
                <Typography>
                   <b>Tech Used:</b>
