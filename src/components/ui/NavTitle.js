@@ -18,7 +18,7 @@ function NavTitle() {
                </Button>
             </Tooltip>
             <Tooltip id="Email" title="Contact Me">
-               <Button href="mailto:patwebdev1.com">
+               <Button href="mailto:patwebdev1@gmail.com">
                   <Email />
                </Button>
             </Tooltip>
