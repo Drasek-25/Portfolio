@@ -59,17 +59,17 @@ const projectData = [
          "User Menu",
       ],
    },
-   // {
-   //    title: "Constellation Animation",
-   //    image: canvasani,
-   //    liveLink: "https://placeholder.com",
-   //    repoLink: "https://github.com/Drasek-25/CANVAS-Constellation",
-   //    techUsed: ["JS", "Canvas"],
-   //    features: [
-   //       "Progammatic animation using the HTML5 Canvas element",
-   //       "Is the featured background of this webpage",
-   //    ],
-   // },
+   {
+      title: "Constellation Animation",
+      image: canvasani,
+      liveLink: "handled via function in project card",
+      repoLink: "https://github.com/Drasek-25/CANVAS-Constellation",
+      techUsed: ["JS", "Canvas"],
+      features: [
+         "Progammatic animation using the HTML5 Canvas element",
+         "Is the featured background of this webpage",
+      ],
+   },
    {
       title: "Github Social App",
       image: github,
