@@ -13,19 +13,20 @@ const projectData = [
    {
       title: "Portfolio",
       image: portfolio,
-      liveLink: "placeholder.com",
+      liveLink: "https://webdevpat.com",
       repoLink: "https://github.com/Drasek-25/Portfolio",
-      techUsed: ["React", "Material UI", "Canvas"],
+      techUsed: ["React", "Material UI", "Canvas", "Apache"],
       features: [
          "Fully Responsive UI",
          "Canvas integrated into React",
          "Email service workaround via Google Forms",
+         "Hosted on AWS",
       ],
    },
    {
       title: "Hacker News App",
       image: hackernews,
-      liveLink: "placeholder.com",
+      liveLink: "https://hackernews.webdevpat.com",
       repoLink: "https://github.com/Drasek-25/REACT-ROUTER-Hacker-News",
       techUsed: ["React", "Axios"],
       features: [
@@ -33,24 +34,24 @@ const projectData = [
          "Follow links to posts, users, comments all delivering their own data",
       ],
    },
-   {
-      title: "Plaid Login Utility",
-      image: plaid,
-      liveLink: "placeholder.com",
-      repoLink: "https://github.com/Drasek-25/Plaid-Project",
-      techUsed: ["React", "Redux", "Axios"],
-      features: [
-         "Simple single page application to deal with plaid login",
-         "User Registration/Login",
-         "Real banking software",
-      ],
-   },
+   // {
+   //    title: "Plaid Login Utility",
+   //    image: plaid,
+   //    liveLink: "https://comingsoon.com",
+   //    repoLink: "https://github.com/Drasek-25/Plaid-Project",
+   //    techUsed: ["React", "Redux", "Axios"],
+   //    features: [
+   //       "Simple single page application to deal with plaid login",
+   //       "User Registration/Login",
+   //       "Real banking software",
+   //    ],
+   // },
    {
       title: "Breakout",
       image: breakout,
-      liveLink: "placeholder.com",
+      liveLink: "https://breakout.webdevpat.com",
       repoLink: "https://github.com/Drasek-25/CANVAS-Breakout-Game",
-      techUsed: ["JS", "Canvas"],
+      techUsed: ["JS", "Canvas", "HTML"],
       features: [
          "Fully functioning Breakout Game",
          "Special Powers",
@@ -58,23 +59,23 @@ const projectData = [
          "User Menu",
       ],
    },
-   {
-      title: "Constellation Animation",
-      image: canvasani,
-      liveLink: "placeholder.com",
-      repoLink: "https://github.com/Drasek-25/CANVAS-Constellation",
-      techUsed: ["React", "Redux", "Axios"],
-      features: [
-         "Progammatic animation using the HTML5 Canvas element",
-         "Is the featured background of this webpage",
-      ],
-   },
+   // {
+   //    title: "Constellation Animation",
+   //    image: canvasani,
+   //    liveLink: "https://placeholder.com",
+   //    repoLink: "https://github.com/Drasek-25/CANVAS-Constellation",
+   //    techUsed: ["JS", "Canvas"],
+   //    features: [
+   //       "Progammatic animation using the HTML5 Canvas element",
+   //       "Is the featured background of this webpage",
+   //    ],
+   // },
    {
       title: "Github Social App",
       image: github,
-      liveLink: "placeholder.com",
+      liveLink: "https://github.webdevpat.com",
       repoLink: "https://github.com/Drasek-25/REACT-Github-API",
-      techUsed: ["React", "Redux", "Axios"],
+      techUsed: ["React", "Axios"],
       features: [
          "A full functioning for Github API social network",
          "Follow links to users, friends, and repos, all delivering their own data",
@@ -83,8 +84,8 @@ const projectData = [
    {
       title: "Weather App",
       image: weather,
-      liveLink: "placeholder.com",
-      repoLink: "placeholder.com",
+      liveLink: "https://weather.webdevpat.com",
+      repoLink: "https://github.com/Drasek-25/REACT-Weather-API",
       techUsed: ["React", "Axios"],
       features: [
          "A Fully functioning frontend for the Weather API",
@@ -95,8 +96,8 @@ const projectData = [
    {
       title: "Time Tracker",
       image: timetracker,
-      liveLink: "placeholder.com",
-      repoLink: "placeholder.com",
+      liveLink: "https://timetracker.webdevpat.com",
+      repoLink: "https://github.com/Drasek-25/timeTracker",
       techUsed: ["JS", "HTML", "CSS"],
       features: [
          "Add and remove project cards",
