@@ -2,7 +2,6 @@ import breakout from "./images/breakout.PNG";
 import canvasani from "./images/canvasani.PNG";
 import github from "./images/github.PNG";
 import hackernews from "./images/hackerNews.PNG";
-import plaid from "./images/plaid.PNG";
 import portfolio from "./images/portfolio.PNG";
 import timetracker from "./images/timetracker.PNG";
 import weather from "./images/weather.PNG";
