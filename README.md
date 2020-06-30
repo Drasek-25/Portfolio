@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Developer Portfolio
 
-## Available Scripts
+## Live Version
 
-In the project directory, you can run:
+[webdevpat.com](https://webdevpat.com)
 
-### `npm start`
+## Summary
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I created this online portfolio to display my knowledge in web development. I started this project multiple times before deciding to use Material-UI, after which I moved forward with this site until completion. This project also served as my introduction to Material-UI and I learned how to use it while working on this project. Along with that introduction this was my first experience with deploying a site, and with interaction with AWS. I am super happy with how it turned out!
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Challenges
 
-### `npm test`
+This project was obviously not smooth sailing considering my lack of knowledge in regards to Material-UI and site deployment. Material-UI was a long struggle, their documentation leaves a lot unsaid, and its a completely different method of styling a website compared to bootstrap/CSS. However, I got the hang of it about halfway through the project and after many hours in the documentation. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After completing the project, and spending many hours fine tuning the project, removing errors, making sure every single path resolves properly, and adding some fun things (see the live preview for the Canvas animation), I decided it was good to deploy. I choose AWS because a lot of the webhosting I have heard about that people tend to use for their portfolios, ie.. Heroku and Firebase, seem to have a lot of negative things said about them in regards to site performance. It was because of this, and because I wanted to do a foray into the AWS ecosystem that I chose AWS lightsail to host my portfolio. Hosting through AWS provided me with an apache server with node previously installed. After purchasing a domain, and forwarding it to the IP address of my server and I was ready to move forward.
 
-### `npm run build`
+My first site deployment on my server was easy enough, any files placed into the `htdocs` folder would be the files served when someone accessed my new site's URL. This worked, if only for a single site. Unfortunately though this did not work for me as I needed my server to host multiple sites to this server. After all, what good is a portfolio without projects? It would turn out that this challenge would be the largest one I would face throughout creating this portfolio. Fortunately after countless hours of search results and articles I would find out how to create a virtual host on my server. Through this virtual host, and the creation of multiple subdomains for my URL, I could specify that when one of these subdomains reached my server to direct them to the appropriate folder in which the project requested was located. This was essentially the end of my challenges for this project, I now had a live portfolio and multiple projects I had built previously hosted to my server, all functioning as they should. With the extensive notes I took during this process I have removed the chance of remembering how this all works and is interconnected thus future proofing my own knowledge of how my server operates, because I don't ever want to spend that much time reading article after article figuring this out again.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Images
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I saved images from my time building this project because I knew I would want to include them in my MD after project completion.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Initial layout whiteboarding
 
-### `npm run eject`
+![portfolio-whiteboarding](https://githubmdimages.s3.us-west-2.amazonaws.com/Portfolio%20Whiteboard%201.jpg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCRba%2FsF%2BviSpDdPsbf2D4biGScg0VaTG176O9QawTVYQIgGQGVFLaVh0Y2bB2wxJTk%2FwrmurnbQK2%2B08kXQNVegMwq%2FAEINBAAGgw1OTI2NzkyMDQ1MjciDLlPeCvs5EEtOx%2F2%2BSrZAfCwhmvJhTP4t9qu2XPo4XkoDa4LQtDflbCRjLJFxRK6iInhulo1lXtHvea1fI87pWxLxmlf%2B3PekLOd85XYINIENoc7ZAwoQKFJy5nJSqGHiOv162qRC44kmTJsN1RszrUyXxHdcsrxvxaMd3ZJpVbdy%2BLj6%2FvHvjcU9WgTMLDaKZXc1ZfSZui%2BdGMGDwHxLeFCwxS%2BOHiJS4fDy1tnR9dMxpNoOBnulYTvDNCJlHnKKaSShGmoQxnUKhKgeG3lsulq%2Fwf3pu5L7pbnGRxTbAw83w428bu1WT8wsJ%2Fu9wU69gKQSqxLr0xHWyXqX6oNEwvcQ4FB7Ne3ycaZWAT3akITXC3FvxicMwqWV%2FeCqgocMzgjkYxQI4ummPPSIu%2BVd%2FNKqNL88LXE2YqJC8ZeD9ZMwSmSEL5GLTt95YaMP8GDkKBuCayFC3wnvvwW5zqAVyf7xh1v8gfg0rLeqLIri0CcqrEYCBVZ1KVWHzNCDABrrmn8t3DvcD9jUu4QqIRhQhJ1vy0owykrPrLoy7M4%2Fh3l7gPGFZENpqGULViqJ78uoQfy48p7BXI4o1YeNp5uYLUJ3LO8cncTctThYiht5ImR4l4QGa2ws2bi%2BxNM7nifIWgC%2F4J5XVgSVu%2BTawY4Wqnlls%2Bo80PlEqgO2%2BQXENL%2F4MICTXiQmiM4NfG9uxGbdSM4Iq82sBfF5AdAbNQ23vUSmxRLzDlutgcGwjgSp7%2BTDgSuNPwBLeMz6GtcsUE7M3%2FkIkD7FxkTDWkCUmU6aJTUaWs4%2F%2Banm95mDnHgUYo9h1QWO13HgQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200630T200058Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAYT7TO62XXLOPEIU4%2F20200630%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=4fc441acf233510c39eb581bd6be677ceffadaa7791c422fb0e06fcd2abce57b)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### XD Artboard 1
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![portfolio-xd-artboard-1](https://githubmdimages.s3.us-west-2.amazonaws.com/Portfolio%20XD%20artboard%201.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCRba%2FsF%2BviSpDdPsbf2D4biGScg0VaTG176O9QawTVYQIgGQGVFLaVh0Y2bB2wxJTk%2FwrmurnbQK2%2B08kXQNVegMwq%2FAEINBAAGgw1OTI2NzkyMDQ1MjciDLlPeCvs5EEtOx%2F2%2BSrZAfCwhmvJhTP4t9qu2XPo4XkoDa4LQtDflbCRjLJFxRK6iInhulo1lXtHvea1fI87pWxLxmlf%2B3PekLOd85XYINIENoc7ZAwoQKFJy5nJSqGHiOv162qRC44kmTJsN1RszrUyXxHdcsrxvxaMd3ZJpVbdy%2BLj6%2FvHvjcU9WgTMLDaKZXc1ZfSZui%2BdGMGDwHxLeFCwxS%2BOHiJS4fDy1tnR9dMxpNoOBnulYTvDNCJlHnKKaSShGmoQxnUKhKgeG3lsulq%2Fwf3pu5L7pbnGRxTbAw83w428bu1WT8wsJ%2Fu9wU69gKQSqxLr0xHWyXqX6oNEwvcQ4FB7Ne3ycaZWAT3akITXC3FvxicMwqWV%2FeCqgocMzgjkYxQI4ummPPSIu%2BVd%2FNKqNL88LXE2YqJC8ZeD9ZMwSmSEL5GLTt95YaMP8GDkKBuCayFC3wnvvwW5zqAVyf7xh1v8gfg0rLeqLIri0CcqrEYCBVZ1KVWHzNCDABrrmn8t3DvcD9jUu4QqIRhQhJ1vy0owykrPrLoy7M4%2Fh3l7gPGFZENpqGULViqJ78uoQfy48p7BXI4o1YeNp5uYLUJ3LO8cncTctThYiht5ImR4l4QGa2ws2bi%2BxNM7nifIWgC%2F4J5XVgSVu%2BTawY4Wqnlls%2Bo80PlEqgO2%2BQXENL%2F4MICTXiQmiM4NfG9uxGbdSM4Iq82sBfF5AdAbNQ23vUSmxRLzDlutgcGwjgSp7%2BTDgSuNPwBLeMz6GtcsUE7M3%2FkIkD7FxkTDWkCUmU6aJTUaWs4%2F%2Banm95mDnHgUYo9h1QWO13HgQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200630T200330Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAYT7TO62XXLOPEIU4%2F20200630%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=29cca3a2e9ab99fe8f4b63654432e52af983bbc45ecad5317509d1de1a2f8409)
 
-## Learn More
+### XD Artboard 2
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![portfolio-xd-artboard-2](https://githubmdimages.s3.us-west-2.amazonaws.com/Portfolio%20XD%20artboard%202.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCRba%2FsF%2BviSpDdPsbf2D4biGScg0VaTG176O9QawTVYQIgGQGVFLaVh0Y2bB2wxJTk%2FwrmurnbQK2%2B08kXQNVegMwq%2FAEINBAAGgw1OTI2NzkyMDQ1MjciDLlPeCvs5EEtOx%2F2%2BSrZAfCwhmvJhTP4t9qu2XPo4XkoDa4LQtDflbCRjLJFxRK6iInhulo1lXtHvea1fI87pWxLxmlf%2B3PekLOd85XYINIENoc7ZAwoQKFJy5nJSqGHiOv162qRC44kmTJsN1RszrUyXxHdcsrxvxaMd3ZJpVbdy%2BLj6%2FvHvjcU9WgTMLDaKZXc1ZfSZui%2BdGMGDwHxLeFCwxS%2BOHiJS4fDy1tnR9dMxpNoOBnulYTvDNCJlHnKKaSShGmoQxnUKhKgeG3lsulq%2Fwf3pu5L7pbnGRxTbAw83w428bu1WT8wsJ%2Fu9wU69gKQSqxLr0xHWyXqX6oNEwvcQ4FB7Ne3ycaZWAT3akITXC3FvxicMwqWV%2FeCqgocMzgjkYxQI4ummPPSIu%2BVd%2FNKqNL88LXE2YqJC8ZeD9ZMwSmSEL5GLTt95YaMP8GDkKBuCayFC3wnvvwW5zqAVyf7xh1v8gfg0rLeqLIri0CcqrEYCBVZ1KVWHzNCDABrrmn8t3DvcD9jUu4QqIRhQhJ1vy0owykrPrLoy7M4%2Fh3l7gPGFZENpqGULViqJ78uoQfy48p7BXI4o1YeNp5uYLUJ3LO8cncTctThYiht5ImR4l4QGa2ws2bi%2BxNM7nifIWgC%2F4J5XVgSVu%2BTawY4Wqnlls%2Bo80PlEqgO2%2BQXENL%2F4MICTXiQmiM4NfG9uxGbdSM4Iq82sBfF5AdAbNQ23vUSmxRLzDlutgcGwjgSp7%2BTDgSuNPwBLeMz6GtcsUE7M3%2FkIkD7FxkTDWkCUmU6aJTUaWs4%2F%2Banm95mDnHgUYo9h1QWO13HgQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200630T200423Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAYT7TO62XXLOPEIU4%2F20200630%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=5d9899b25a4823316a236356691172972be768fc018754882cf82ec2e6f30f5e)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### XD Artboard 3
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![portfolio-xd-artboard-3](https://githubmdimages.s3.us-west-2.amazonaws.com/Portfolio%20XD%20artboard%203.jpg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCRba%2FsF%2BviSpDdPsbf2D4biGScg0VaTG176O9QawTVYQIgGQGVFLaVh0Y2bB2wxJTk%2FwrmurnbQK2%2B08kXQNVegMwq%2FAEINBAAGgw1OTI2NzkyMDQ1MjciDLlPeCvs5EEtOx%2F2%2BSrZAfCwhmvJhTP4t9qu2XPo4XkoDa4LQtDflbCRjLJFxRK6iInhulo1lXtHvea1fI87pWxLxmlf%2B3PekLOd85XYINIENoc7ZAwoQKFJy5nJSqGHiOv162qRC44kmTJsN1RszrUyXxHdcsrxvxaMd3ZJpVbdy%2BLj6%2FvHvjcU9WgTMLDaKZXc1ZfSZui%2BdGMGDwHxLeFCwxS%2BOHiJS4fDy1tnR9dMxpNoOBnulYTvDNCJlHnKKaSShGmoQxnUKhKgeG3lsulq%2Fwf3pu5L7pbnGRxTbAw83w428bu1WT8wsJ%2Fu9wU69gKQSqxLr0xHWyXqX6oNEwvcQ4FB7Ne3ycaZWAT3akITXC3FvxicMwqWV%2FeCqgocMzgjkYxQI4ummPPSIu%2BVd%2FNKqNL88LXE2YqJC8ZeD9ZMwSmSEL5GLTt95YaMP8GDkKBuCayFC3wnvvwW5zqAVyf7xh1v8gfg0rLeqLIri0CcqrEYCBVZ1KVWHzNCDABrrmn8t3DvcD9jUu4QqIRhQhJ1vy0owykrPrLoy7M4%2Fh3l7gPGFZENpqGULViqJ78uoQfy48p7BXI4o1YeNp5uYLUJ3LO8cncTctThYiht5ImR4l4QGa2ws2bi%2BxNM7nifIWgC%2F4J5XVgSVu%2BTawY4Wqnlls%2Bo80PlEqgO2%2BQXENL%2F4MICTXiQmiM4NfG9uxGbdSM4Iq82sBfF5AdAbNQ23vUSmxRLzDlutgcGwjgSp7%2BTDgSuNPwBLeMz6GtcsUE7M3%2FkIkD7FxkTDWkCUmU6aJTUaWs4%2F%2Banm95mDnHgUYo9h1QWO13HgQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200630T200428Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAYT7TO62XXLOPEIU4%2F20200630%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=4fa2e2bcd42187517b855317218be10f70898a655a5754d83bb7b2576ff392ba)
