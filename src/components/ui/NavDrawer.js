@@ -126,7 +126,7 @@ function NavDrawer({ open, handleDrawerClose }) {
             </ListItem>
             <ListItem
                component={Button}
-               href="https://www.linkedin.com/in/patrick-marschlowitz-77ba5b7b/"
+               href="https://www.linkedin.com/in/patrickm25/"
                onClick={handleDrawerClose}
             >
                <ListItemIcon>

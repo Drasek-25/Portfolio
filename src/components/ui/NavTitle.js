@@ -23,7 +23,7 @@ function NavTitle() {
                </Button>
             </Tooltip>
             <Tooltip id="LinkedIn" title="View my LinkedIn">
-               <Button href="https://www.linkedin.com/in/patrick-marschlowitz-77ba5b7b/">
+               <Button href="https://www.linkedin.com/in/patrickm25/">
                   <LinkedIn />
                </Button>
             </Tooltip>

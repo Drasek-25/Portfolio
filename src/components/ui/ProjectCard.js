@@ -40,7 +40,7 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
          : setCardClass(classes.card);
    };
    return (
-      <Grid item xs={12} sm={6} md={6} lg={4}>
+      <Grid item xs={12} sm={12} md={6} lg={4}>
          <Card className={cardClass} elevation={10}>
             <Typography variant="h5" color="primary" component="div" noWrap>
                <Box m=".5rem">{title}</Box>
@@ -65,7 +65,12 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
                   <br />
                   <br />
                </Typography>
-               <Box height="7rem">
+               <Box
+                  ref={(el) => {
+                     if (!el) return;
+                     console.log(el.getBoundingClientRect().height);
+                  }}
+               >
                   <Typography noWrap={false}>
                      <b>Features:</b>
                      <br />
@@ -81,21 +86,17 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
                </Box>
             </CardContent>
             <CardActions>
-               {/* dirty button switch, i imagine there is a cleaner way to implement */}
-               {title === "Constellation Animation" ? (
-                  <Button
-                     onClick={handleCardClassChange}
-                     variant="contained"
-                     color="secondary"
-                  >
-                     <Typography color="primary">Live View</Typography>
-                  </Button>
-               ) : (
-                  <Button href={liveLink} variant="contained" color="secondary">
-                     <Typography color="primary">Live View</Typography>
-                  </Button>
-               )}
-
+               {/* i dont know how spreading out an object with 'key and value' matching
+               'attribute and setting' returns a proper attribute, but im not complaing */}
+               <Button
+                  {...(title === "Constellation Animation"
+                     ? { onClick: handleCardClassChange }
+                     : { href: liveLink })}
+                  variant="contained"
+                  color="secondary"
+               >
+                  <Typography color="primary">Live View</Typography>
+               </Button>
                <Button href={repoLink} variant="contained" color="secondary">
                   <Typography color="primary">Repo</Typography>
                </Button>
