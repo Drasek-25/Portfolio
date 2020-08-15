@@ -70,29 +70,29 @@ const projectData = [
          "Follow links to posts, users, comments all delivering their own data",
       ],
    },
-   {
-      title: "Github Social App",
-      image: github,
-      liveLink: "https://github.webdevpat.com",
-      repoLink: "https://github.com/Drasek-25/REACT-Github-API",
-      techUsed: ["React", "Axios"],
-      features: [
-         "A full functioning for Github API social network",
-         "Follow links to users, friends, and repos, all delivering their own data",
-      ],
-   },
-   {
-      title: "Weather App",
-      image: weather,
-      liveLink: "https://weather.webdevpat.com",
-      repoLink: "https://github.com/Drasek-25/REACT-Weather-API",
-      techUsed: ["React", "Axios"],
-      features: [
-         "A Fully functioning frontend for the Weather API",
-         "Search for your location via zipcode",
-         "Todays weather and 5 day forcast",
-      ],
-   },
+   // {
+   //    title: "Github Social App",
+   //    image: github,
+   //    liveLink: "https://github.webdevpat.com",
+   //    repoLink: "https://github.com/Drasek-25/REACT-Github-API",
+   //    techUsed: ["React", "Axios"],
+   //    features: [
+   //       "A full functioning for Github API social network",
+   //       "Follow links to users, friends, and repos, all delivering their own data",
+   //    ],
+   // },
+   // {
+   //    title: "Weather App",
+   //    image: weather,
+   //    liveLink: "https://weather.webdevpat.com",
+   //    repoLink: "https://github.com/Drasek-25/REACT-Weather-API",
+   //    techUsed: ["React", "Axios"],
+   //    features: [
+   //       "A Fully functioning frontend for the Weather API",
+   //       "Search for your location via zipcode",
+   //       "Todays weather and 5 day forcast",
+   //    ],
+   // },
    {
       title: "Time Tracker",
       image: timetracker,
