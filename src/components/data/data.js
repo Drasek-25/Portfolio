@@ -23,14 +23,16 @@ const projectData = [
       ],
    },
    {
-      title: "Hacker News App",
-      image: hackernews,
-      liveLink: "https://hackernews.webdevpat.com",
-      repoLink: "https://github.com/Drasek-25/REACT-ROUTER-Hacker-News",
-      techUsed: ["React", "Axios"],
+      title: "Breakout",
+      image: breakout,
+      liveLink: "https://breakout.webdevpat.com",
+      repoLink: "https://github.com/Drasek-25/CANVAS-Breakout-Game",
+      techUsed: ["JS", "Canvas", "HTML"],
       features: [
-         "Frontend for Hacker News API",
-         "Follow links to posts, users, comments all delivering their own data",
+         "Fully functioning Breakout Game",
+         "Special Powers",
+         "Multiple Levels",
+         "User Menu",
       ],
    },
    // {
@@ -46,19 +48,6 @@ const projectData = [
    //    ],
    // },
    {
-      title: "Breakout",
-      image: breakout,
-      liveLink: "https://breakout.webdevpat.com",
-      repoLink: "https://github.com/Drasek-25/CANVAS-Breakout-Game",
-      techUsed: ["JS", "Canvas", "HTML"],
-      features: [
-         "Fully functioning Breakout Game",
-         "Special Powers",
-         "Multiple Levels",
-         "User Menu",
-      ],
-   },
-   {
       title: "Constellation Animation",
       image: canvasani,
       liveLink: "handled via function in project card",
@@ -68,6 +57,17 @@ const projectData = [
          "Progammatic animation using the HTML5 Canvas element",
          "Is the featured background of this webpage",
          "Animation is interactable with mouse click",
+      ],
+   },
+   {
+      title: "Hacker News App",
+      image: hackernews,
+      liveLink: "https://hackernews.webdevpat.com",
+      repoLink: "https://github.com/Drasek-25/REACT-ROUTER-Hacker-News",
+      techUsed: ["React", "Axios"],
+      features: [
+         "Frontend for Hacker News API",
+         "Follow links to posts, users, comments all delivering their own data",
       ],
    },
    {
