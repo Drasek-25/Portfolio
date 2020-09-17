@@ -11,6 +11,7 @@ const Home = () => {
             justify="center"
             alignItems="center"
             style={{ minHeight: "95vh" }}
+            className="unselectable"
          >
             <Grid item>
                <Typography

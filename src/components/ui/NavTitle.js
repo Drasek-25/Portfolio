@@ -7,7 +7,11 @@ function NavTitle() {
    return (
       <Box display={{ xs: "none", md: "block", lg: "block" }}>
          <Typography variant="h5" color="primary">
-            <Box fontWeight="fontWeightRegular" mt=".5rem">
+            <Box
+               fontWeight="fontWeightRegular"
+               mt=".5rem"
+               className="unselectable"
+            >
                Patrick Marschlowitz
             </Box>
          </Typography>
