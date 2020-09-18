@@ -60,6 +60,7 @@ const Contact = () => {
 
    //found at 'https://medium.com/@levvi/how-to-use-google-forms-as-a-free-email-service-for-your-custom-react-form-or-any-other-1aa837422a4'
    const handleSendMessage = () => {
+      //Form Validation
       if (
          !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
             form.email
@@ -77,6 +78,7 @@ const Contact = () => {
          setLoading(false);
          return;
       }
+      //Beginning of Form Sending
       setLoading(true);
       setError(initialError);
       setSuccess(false);
