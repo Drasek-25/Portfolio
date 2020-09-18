@@ -47,7 +47,11 @@ const Contact = () => {
    };
    const [form, setForm] = useState(initialState);
    const [loading, setLoading] = useState(false);
-   const [error, setError] = useState(false);
+   const initialError = {
+      bool: false,
+      errorText: "",
+   };
+   const [error, setError] = useState(initialError);
    const [success, setSuccess] = useState(false);
 
    const handleInput = (e) => {
@@ -56,11 +60,28 @@ const Contact = () => {
 
    //found at 'https://medium.com/@levvi/how-to-use-google-forms-as-a-free-email-service-for-your-custom-react-form-or-any-other-1aa837422a4'
    const handleSendMessage = () => {
+      if (
+         !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+            form.email
+         )
+      ) {
+         setError({ bool: true, errorText: "Invalid Email" });
+         setLoading(false);
+         return;
+      } else if (form.name.length < 1) {
+         setError({ bool: true, errorText: "Name Field Blank" });
+         setLoading(false);
+         return;
+      } else if (form.message.length < 1) {
+         setError({ bool: true, errorText: "Message Field Blank" });
+         setLoading(false);
+         return;
+      }
       setLoading(true);
-      setError(false);
+      setError(initialError);
       setSuccess(false);
 
-      //after creating form open 'send' and go to the link
+      //after creating form, open 'send' and go to the link
       //on the public form inspect the input fields for 'entry.numbers'
       //and for the action='url' in the form tag
       const ACTION_URL =
@@ -78,13 +99,13 @@ const Contact = () => {
          .post(CORS_PROXY + ACTION_URL, formData)
          .then(() => {
             setLoading(false);
-            setError(false);
+            setError(initialError);
             setSuccess(true);
             setForm(initialState);
          })
          .catch(() => {
             setLoading(false);
-            setError(true);
+            setError({ bool: true, errorText: "Email Failed" });
             setSuccess(false);
          });
    };
@@ -129,10 +150,10 @@ const Contact = () => {
                            <Typography variant="h4">Sending...</Typography>
                         </Box>
                      )}
-                     {error && (
+                     {error.bool && (
                         <Box m="5px" display="flex">
                            <Typography variant="h4" color="error">
-                              Error.
+                              {error.errorText}
                            </Typography>
                         </Box>
                      )}
