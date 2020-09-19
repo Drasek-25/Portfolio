@@ -12,6 +12,18 @@ import theme from "./ui/Theme";
 import { ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
+   console.log(
+      `
+Hello! 
+
+Thanks for checking out my portfolio. 
+I am currently looking for work as a developer and would love to hear from you!
+Checkout my resume or contact me to get in touch
+
+Cheers,
+   Patrick
+`
+   );
    return (
       <ThemeProvider theme={theme}>
          <Header />
