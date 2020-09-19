@@ -21,12 +21,13 @@ import {
    ContactMail,
 } from "@material-ui/icons";
 
-const drawerWidth = 180;
+const drawerWidth = 160;
 const useStyles = makeStyles((theme) => ({
    largeIcon: {
-      marginLeft: "1rem",
+      marginLeft: "-.6rem",
       width: 40,
       height: 40,
+      marginBottom: "-1rem",
    },
    drawer: {
       width: drawerWidth,
