@@ -46,6 +46,12 @@ const useStyles = makeStyles((theme) => ({
       ...theme.mixins.toolbar,
       justifyContent: "flex-start",
    },
+   buttons: {
+      paddingLeft: "16px",
+      paddingRight: "16px",
+      paddingTop: "8px",
+      paddingBottom: "8px",
+   },
 }));
 
 function NavDrawer({ open, handleDrawerClose }) {
@@ -119,6 +125,7 @@ function NavDrawer({ open, handleDrawerClose }) {
                component={Button}
                href="https://github.com/Drasek-25"
                onClick={handleDrawerClose}
+               className={classes.buttons}
             >
                <ListItemIcon>
                   <GitHub color="primary" />
@@ -129,6 +136,7 @@ function NavDrawer({ open, handleDrawerClose }) {
                component={Button}
                href="https://www.linkedin.com/in/patrickm25/"
                onClick={handleDrawerClose}
+               className={classes.buttons}
             >
                <ListItemIcon>
                   <LinkedIn color="primary" />
