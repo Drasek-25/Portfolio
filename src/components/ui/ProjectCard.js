@@ -86,17 +86,17 @@ function ProjectCard({ title, image, liveLink, repoLink, techUsed, features }) {
                </Box>
             </CardContent>
             <CardActions>
-               {/* i dont know how spreading out an object with 'key and value' matching
-               'attribute and setting' returns a proper attribute, but im not complaing */}
-               <Button
-                  {...(title === "Constellation Animation"
-                     ? { onClick: handleCardClassChange }
-                     : { href: liveLink })}
-                  variant="contained"
-                  color="secondary"
-               >
-                  <Typography color="primary">Live View</Typography>
-               </Button>
+               {liveLink && (
+                  <Button
+                     {...(title === "Constellation Animation"
+                        ? { onClick: handleCardClassChange }
+                        : { href: liveLink })}
+                     variant="contained"
+                     color="secondary"
+                  >
+                     <Typography color="primary">Live View</Typography>
+                  </Button>
+               )}
                <Button href={repoLink} variant="contained" color="secondary">
                   <Typography color="primary">Repo</Typography>
                </Button>

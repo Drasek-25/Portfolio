@@ -5,6 +5,7 @@ import hackernews from "./images/hackerNews.PNG";
 import portfolio from "./images/portfolio.PNG";
 import timetracker from "./images/timetracker.PNG";
 // import weather from "./images/weather.PNG";
+import attendance from "./images/attendance.PNG";
 
 // const placeHolderImgUrl = "https://picsum.photos/288/162";
 
@@ -20,6 +21,19 @@ const projectData = [
          "Canvas integrated into React",
          "Email service workaround via Google Forms",
          "Hosted on AWS",
+      ],
+   },
+   {
+      title: "Attendance Backend",
+      image: attendance,
+      // liveLink: "https://breakout.webdevpat.com",
+      repoLink: "https://github.com/Drasek-25/NODE-Attendance-Backend",
+      techUsed: ["NODE", "MongoDB", "Bcrypt", "Express-Sessions"],
+      features: [
+         "Backend for class attendance tracking application",
+         "Secure password storage and comparison using bcrypt",
+         "Secure login status using express-session",
+         "Development only routes for testing",
       ],
    },
    {
