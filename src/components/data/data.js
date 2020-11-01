@@ -1,15 +1,37 @@
 import breakout from "./images/breakout.PNG";
 import canvasani from "./images/canvasani.PNG";
-// import github from "./images/github.PNG";
 import hackernews from "./images/hackerNews.PNG";
 import portfolio from "./images/portfolio.PNG";
 import timetracker from "./images/timetracker.PNG";
-// import weather from "./images/weather.PNG";
 import attendance from "./images/attendance.PNG";
+import goApi from "./images/goApi.PNG"
 
 // const placeHolderImgUrl = "https://picsum.photos/288/162";
 
 const projectData = [
+   {
+      title: "Attendance Backend",
+      image: attendance,
+      repoLink: "https://github.com/Drasek-25/NODE-Attendance-Backend",
+      techUsed: ["NODE", "MongoDB", "Bcrypt", "Express-Sessions"],
+      features: [
+         "Backend for class attendance tracking application",
+         "Secure password storage and comparison using bcrypt",
+         "Secure login status using express-session",
+         "Development only routes for testing",
+      ],
+   },
+   {
+      title: "Pokemon Rest API",
+      image: goApi,
+      repoLink: "https://github.com/Drasek-25/GO-Rest-API",
+      techUsed: ["Golang", "Mux"],
+      features: [
+         "API for interaction with Pokemon data",
+         "CRUD methods for interaction with data",
+         "Handleing JSON parsing through manual unmarshalling",
+      ],
+   },
    {
       title: "Portfolio",
       image: portfolio,
@@ -21,19 +43,6 @@ const projectData = [
          "Canvas integrated into React",
          "Email service workaround via Google Forms",
          "Hosted on AWS",
-      ],
-   },
-   {
-      title: "Attendance Backend",
-      image: attendance,
-      // liveLink: "https://breakout.webdevpat.com",
-      repoLink: "https://github.com/Drasek-25/NODE-Attendance-Backend",
-      techUsed: ["NODE", "MongoDB", "Bcrypt", "Express-Sessions"],
-      features: [
-         "Backend for class attendance tracking application",
-         "Secure password storage and comparison using bcrypt",
-         "Secure login status using express-session",
-         "Development only routes for testing",
       ],
    },
    {
