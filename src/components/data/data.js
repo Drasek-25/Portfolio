@@ -4,11 +4,25 @@ import hackernews from "./images/hackerNews.PNG";
 import portfolio from "./images/portfolio.PNG";
 import timetracker from "./images/timetracker.PNG";
 import attendance from "./images/attendance.PNG";
-import goApi from "./images/goApi.PNG"
+import goApi from "./images/goApi.PNG";
+import minesweeper from "./images/minesweeper.PNG";
 
 // const placeHolderImgUrl = "https://picsum.photos/288/162";
 
 const projectData = [
+   {
+      title: "Minesweeper",
+      image: minesweeper,
+      liveLink: "https://minesweeper.webdevpat.com/",
+      repoLink: "https://github.com/Drasek-25/REACT-Minesweeper",
+      techUsed: ["React"],
+      features: [
+         "Game built by reverse engineering Classic Minesweeper",
+         "Classic left, right, and middle mouse functionality",
+         "Game over animation",
+         'Classic and "create your own" map sizes',
+      ],
+   },
    {
       title: "Attendance Backend",
       image: attendance,
@@ -30,19 +44,6 @@ const projectData = [
          "API for interaction with Pokemon data",
          "CRUD methods for interaction with data",
          "Handleing JSON parsing through manual unmarshalling",
-      ],
-   },
-   {
-      title: "Portfolio",
-      image: portfolio,
-      liveLink: "https://webdevpat.com",
-      repoLink: "https://github.com/Drasek-25/Portfolio",
-      techUsed: ["React", "Material UI", "Canvas", "Apache"],
-      features: [
-         "Fully Responsive UI",
-         "Canvas integrated into React",
-         "Email service workaround via Google Forms",
-         "Hosted on AWS",
       ],
    },
    {
@@ -83,6 +84,32 @@ const projectData = [
       ],
    },
    {
+      title: "Time Tracker",
+      image: timetracker,
+      liveLink: "https://timetracker.webdevpat.com",
+      repoLink: "https://github.com/Drasek-25/timeTracker",
+      techUsed: ["JS", "HTML", "CSS"],
+      features: [
+         "Add and remove project cards",
+         "Time tracking for each card",
+         "Checkbox for tracking timesheet workflow",
+         "Export as .xml file",
+      ],
+   },
+   {
+      title: "Portfolio",
+      image: portfolio,
+      liveLink: "https://webdevpat.com",
+      repoLink: "https://github.com/Drasek-25/Portfolio",
+      techUsed: ["React", "Material UI", "Canvas", "Apache"],
+      features: [
+         "Fully Responsive UI",
+         "Canvas integrated into React",
+         "Email service workaround via Google Forms",
+         "Hosted on AWS",
+      ],
+   },
+   {
       title: "Hacker News App",
       image: hackernews,
       liveLink: "https://hackernews.webdevpat.com",
@@ -116,18 +143,5 @@ const projectData = [
    //       "Todays weather and 5 day forcast",
    //    ],
    // },
-   {
-      title: "Time Tracker",
-      image: timetracker,
-      liveLink: "https://timetracker.webdevpat.com",
-      repoLink: "https://github.com/Drasek-25/timeTracker",
-      techUsed: ["JS", "HTML", "CSS"],
-      features: [
-         "Add and remove project cards",
-         "Time tracking for each card",
-         "Checkbox for tracking timesheet workflow",
-         "Export as .xml file",
-      ],
-   },
 ];
 export default projectData;
